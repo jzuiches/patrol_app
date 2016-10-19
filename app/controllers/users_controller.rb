@@ -15,8 +15,6 @@ def create
   if @user.save
     flash[:success] = "Welcome to the SVSP training log"
     render json: flash[:success]
-  else
-    render json:
   end
 end
 
