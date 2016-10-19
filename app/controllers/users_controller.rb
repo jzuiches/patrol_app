@@ -17,10 +17,11 @@ def create
     render json: flash[:success]
   else
     render json:
+  end
 end
 
-private
-def user_params
-  params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :username)
-
+  private
+  def user_params
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :username)
+  end
 end
